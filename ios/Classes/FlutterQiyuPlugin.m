@@ -151,7 +151,7 @@
         sessionVC.commonQuestionTemplateId = [[paramDict objectForKey:@"faqTemplateId"] intValue];
     }
 
-    [sessionVC.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain actionHandler:^{
+    [sessionVC.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close"] style:UIBarButtonItemStylePlain actionHandler:^{
         [self.viewController dismissViewControllerAnimated:true completion:nil];
     }]];
 
