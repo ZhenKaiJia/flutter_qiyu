@@ -255,7 +255,7 @@ public class FlutterQiyuPlugin implements FlutterPlugin, MethodCallHandler {
         if (uiCustomization == null) {
             uiCustomization = ysfOptions.uiCustomization = new UICustomization();
         }
-        uiCustomization.customerHeadImageUrl = customerHeadImageUrl;
+        uiCustomization.rightAvatar = customerHeadImageUrl;
         uiCustomization.topTipBarTextColor = QiYuUtils.parseColor(sessionTipTextColor);
         uiCustomization.topTipBarTextSize = sessionTipTextFontSize;
         uiCustomization.textMsgColorRight = QiYuUtils.parseColor(customMessageTextColor);
