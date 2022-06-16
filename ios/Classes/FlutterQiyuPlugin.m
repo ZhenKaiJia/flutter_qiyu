@@ -165,6 +165,9 @@
 - (void)setCustomUIConfig:(NSDictionary *)options
 {
     NSDictionary *paramDict = options;
+    if ([paramDict objectForKey:@"customerHeadImageUrl"]) {
+        [[QYSDK sharedSDK] customUIConfig].customerHeadImageUrl = [paramDict objectForKey:@"customerHeadImageUrl"];
+    }
     if ([paramDict objectForKey:@"sessionTipTextColor"]) {
         [[QYSDK sharedSDK] customUIConfig].sessionTipTextColor = [self colorFromHexString:[paramDict objectForKey:@"sessionTipTextColor"]];
     }

@@ -206,6 +206,8 @@ public class FlutterQiyuPlugin implements FlutterPlugin, MethodCallHandler {
     }
 
     private void setCustomUIConfig(MethodCall call) {
+        // 访客头像,https链接
+        String customerHeadImageUrl = call.argument("customerHeadImageUrl");
         // 会话窗口上方提示条中的文本字体颜色
         String sessionTipTextColor = call.argument("sessionTipTextColor");
         // 会话窗口上方提示条中的文本字体大小
@@ -253,6 +255,7 @@ public class FlutterQiyuPlugin implements FlutterPlugin, MethodCallHandler {
         if (uiCustomization == null) {
             uiCustomization = ysfOptions.uiCustomization = new UICustomization();
         }
+        uiCustomization.customerHeadImageUrl = customerHeadImageUrl;
         uiCustomization.topTipBarTextColor = QiYuUtils.parseColor(sessionTipTextColor);
         uiCustomization.topTipBarTextSize = sessionTipTextFontSize;
         uiCustomization.textMsgColorRight = QiYuUtils.parseColor(customMessageTextColor);
